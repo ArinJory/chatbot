@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💬 AriBot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(270deg, #a18cd1, #fbc2eb, #84fab0, #8fd3f4);
+            background-size: 800% 800%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        
+        .chat-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 850px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+       
+        h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            animation: glowText 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowText {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ffaae0, 0 0 30px #d76dff; }
+            to { text-shadow: 0 0 20px #fff, 0 0 40px #84fab0, 0 0 60px #8fd3f4; }
+        }
+
+       
+        iframe {
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            width: 100%;
+            min-height: 600px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            background: rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 45px rgba(255, 255, 255, 0.4);
+        }
+
+        
+        .chat-container::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 880px;
+            height: 620px;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #84fab0);
+            background-size: 300%;
+            border-radius: 25px;
+            filter: blur(30px);
+            animation: borderGlow 6s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+       
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0.9;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        footer span {
+            color: #ffbbea;
+            font-weight: 600;
+        }
+
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            iframe { min-height: 500px; }
+            .chat-container { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>💬 AriBot</h1>
+    </div>
+    <footer>✨ Desarrollado con 💖 por <span>Ari</span> ✨</footer>
+
+    
+</body>
+</html>
